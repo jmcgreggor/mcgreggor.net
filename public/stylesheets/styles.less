@@ -7,6 +7,16 @@
 @bk-img1: "https://picsum.photos/g/3200/1240?blur";
 @bk-img2: "https://picsum.photos/g/2800/1260?blur";
 
+@font-face {
+font-family: "SAILORRegular";
+src:
+url("../fonts/SAILORRegular.woff") format("woff"),
+url("../fonts/SAILORRegular.woff2") format("woff2"),
+url("../fonts/SAILOR.otf") format("opentype"),
+url("../fonts/SAILORRegular.ttf") format("ttf"),
+url("../fonts/SAILORRegular.svg#filename") format("svg");
+}
+
 html, body {
   height: 100%;
   background: #202034;
@@ -37,9 +47,11 @@ header .container {
 
 header .hero-text .name {
     display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
+
+    // text-transform: uppercase;
+    font-family: SAILORRegular;
+    // font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 4em;
     font-weight: 700;
 }
 
