@@ -17,6 +17,10 @@ router.get("/about",function(req,res){
   res.sendFile(viewsPath + "about.html");
 });
 
+router.get("/recommend",function(req,res){
+  res.sendFile(viewsPath + "recommend.html");
+});
+
 router.get("/less.js",function(req,res){
   res.sendFile(path + "/node_modules/less/dist/less.js");
 });
