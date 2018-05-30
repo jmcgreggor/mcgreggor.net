@@ -45,18 +45,33 @@ header .container {
     padding-bottom: 50px;
 }
 
-header .hero-text .name {
+header .hero-text-lg .name {
     display: block;
     //TODO: Add alternate fonts below
     //TODO: Fix for firefox, check for IE (okay in Chrome & Safari)
     font-family: SAILORRegular;
-    font-size: 4em;
-    font-weight: 700;
+    font-size: 8em;
+    //font-weight: 1000;
+}
+
+header .hero-text-sm .name {
+    display: block;
+    //TODO: Add alternate fonts below
+    //TODO: Fix for firefox, check for IE (okay in Chrome & Safari)
+    font-family: SAILORRegular;
+    font-size: 2em;
+    //font-weight: 200;
 }
 
 header .hero-text .skills {
     font-size: 1.25em;
     font-weight: 300;
+}
+
+h2 {
+  font-family: "Avenir Next",sans-serif;
+  font-size: 2em;
+  padding-top: 15px;
 }
 
 hr.star-light {
@@ -75,7 +90,8 @@ section h2 {
 
 section.bg-primary {
     color: #fff;
-    background-color: #428bca;
+    background-color: #023c65;
+    // background-color: #b9763f;
 }
 
 //TODO: Reduce paralax code duplication
@@ -122,8 +138,9 @@ section.bg-dark {
 }
 
 section.bg-light {
-    background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
-    background-image: linear-gradient(rgb(40, 40, 65), rgb(32, 32, 52) 100%);
+    // background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
+    background: #023c65 linear-gradient(to bottom,#023c65,#052942 100%);
+    //background-image: linear-gradient(rgb(1, 49, 84), rgb(4, 58, 96) 100%);
     background-position-x: initial;
     background-position-y: initial;
     background-size: initial;
@@ -132,12 +149,38 @@ section.bg-light {
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
-    background-color: rgb(32, 32, 52);
+    background-color: rgb(2, 60, 101);
     color: white;
 }
 
 footer {
   color: white;
+}
+
+.text-accented {
+  line-height: 0.5;
+  text-align: center;
+  position: relative;
+}
+
+.text-accented:before, .text-accented:after {
+  background-color: #fff;
+  border-radius: 3px;
+  content: " ";
+  position: absolute;
+  height: 10px;
+  top: 0;
+  width: 40%;
+}
+
+.text-accented:before {
+  right: 60%;
+  margin-right: 15px;
+}
+
+.text-accented:after {
+  left: 60%;
+  margin-left: 15px;
 }
 
 .content-wrapper{
