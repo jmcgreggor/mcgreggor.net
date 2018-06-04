@@ -25,6 +25,14 @@ router.get("/less.js",function(req,res){
   res.sendFile(path + "/node_modules/less/dist/less.js");
 });
 
+router.get("/require.js",function(req,res){
+  res.sendFile(path + "/node_modules/requirejs/requirejs.js");
+});
+
+router.get("/circletype.min.js",function(req,res){
+  res.sendFile(path + "/node_modules/circletype/dist/circletype.min.js");
+});
+
 app.use("/",router);
 
 app.use('/images', express.static(path + '/public/images'));
@@ -38,7 +46,6 @@ app.use('/styles', express.static(path + '/public/stylesheets'));
 app.use("*",function(req,res){
   res.sendFile(viewsPath + "404.html");
 });
-
 
 app.listen(8080,function(){
   console.log("Live at Port 8080");
