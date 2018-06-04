@@ -2,7 +2,7 @@
 $(document).ready(() => {
         $('[data-navbar="navbar-div"]').load("partials/navbar.html");
 
-        $('[data-header-index="header-index"]').load("partials/header-index.html", ()=> {
+        $('[data-header-index="header-index"]').load("partials/header-index.html", () => {
            const myCircleType = new CircleType(document.getElementById('bendyArc'));
 
            myCircleType.radius(300).dir(-1);
@@ -20,3 +20,6 @@ $(document).ready(() => {
 });
 
 // TODO: Make text responsive.
+// TODO: Add media query to show logo at certain viewport sizes in  navbar
+// TODO: Add media query to show logo at certain viewport sizes in  header
+// TODO: Add transparency (in CSS)
