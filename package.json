@@ -1,7 +1,7 @@
 {
   "name": "website-using-express",
   "version": "0.1.0",
-  "description": "Base website based on Node.js",
+  "description": "Personal website based on Node.js & Express",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Server.js",
@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/jmcgreggor/mcgreggor.net#readme",
   "dependencies": {
+    "circletype": "^2.3.0",
     "express": "^4.16.3",
     "install": "^0.10.4",
-    "less": "^3.0.4"
+    "less": "^3.0.4",
+    "requirejs": "^2.3.5"
   },
   "devDependencies": {
     "nodemon": "^1.17.4"
