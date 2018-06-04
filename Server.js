@@ -33,6 +33,8 @@ router.get("/circletype.min.js",function(req,res){
   res.sendFile(path + "/node_modules/circletype/dist/circletype.min.js");
 });
 
+// TODO: Consolidate routes
+
 app.use("/",router);
 
 app.use('/images', express.static(path + '/public/images'));
