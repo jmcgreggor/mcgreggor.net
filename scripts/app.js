@@ -1,7 +1,27 @@
+(function (window) {
+  'use strict';
 
-$(document).ready(() => {
+  var Doc = window.Doc;
+  var UserDevice = Doc.CheckViewport;
+
+  UserDevice();
+  /* TODO:
+  Use UserDevice to check the screensize nd return a value (e.g. small||large)
+  The device size will be used below for header and navbar.
+  */
+
+  $(document).ready(() => {
+
+        /* TODO: Used UserDevice to manipulate what is loaded
+        (navbar.html || navbar-mobile.html) - may be able to just manipulate
+        what is in the html file rather than calling a new one.
+        */
         $('[data-navbar="navbar-div"]').load("partials/navbar.html");
 
+        /* TODO: Used UserDevice to manipulate what is loaded
+        (headerindex.html || header-index-mobile.html) - may be able to just manipulate
+        what is in the html file rather than calling a new one.
+        */
         $('[data-header-index="header-index"]').load("partials/header-index.html", () => {
            const myCircleType = new CircleType(document.getElementById('bendyArc'));
 
@@ -17,9 +37,9 @@ $(document).ready(() => {
 
         $('[data-footer="footer-div"]').load("partials/footer.html");
 
-});
+  });
 
-// TODO: Make text responsive.
-// TODO: Add media query to show logo at certain viewport sizes in  navbar
-// TODO: Add media query to show logo at certain viewport sizes in  header
+})(window);
+
+
 // TODO: Add transparency (in CSS)
