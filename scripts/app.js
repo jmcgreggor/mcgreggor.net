@@ -10,10 +10,12 @@
   $(document).ready(() => {
 
         /* TODO: Use UserDevice to manipulate what is loaded
+
         (navbar.html || navbar-mobile.html) - may be able to just manipulate
         what is in the html file rather than calling a new one.
         */
         $('[data-navbar="navbar-div"]').load("partials/navbar.html");
+
 
         /* TODO: Use UserDevice to manipulate what is loaded
         (headerindex.html || header-index-mobile.html) - may be able to just manipulate
@@ -45,6 +47,7 @@
         $('[data-header-recommend="header-recommend"]').load("partials/header-recommend.html");
 
         $('[data-main-index="main-index"]').load("partials/body-index-main.html");
+
 
         $('[data-main-about="main-about"]').load("partials/body-about-main.html");
         $('[data-main-recommend="main-recommend"]').load("partials/body-recommend-main.html");
