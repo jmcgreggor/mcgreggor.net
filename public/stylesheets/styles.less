@@ -1,31 +1,33 @@
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
-@sec-color-1: #FFF;
-@sec-color-2: #75A4B2;
-@sec-color-3: #F4B743;
-@sec-color-4: #D4533F;
-@sec-color-5: #D54A49;
+@bg-color-1: #111111;
+@text-color-1: #fbf9f5;
+@text-color-1-inverse: #111111;
+@text-color-1-hover: #790000;
+
+@bg-color-2: #464646;
+
+
+
+@bg-color-3: #a1a1a1;
+@bg-color-4: #121a1e;
+@bg-color-5: #790000;
+@bg-color-6: #00aeef;
+@bg-color-7: #fbf9f5;
+
 @bk-img1: "https://picsum.photos/g/3200/1240?blur";
 @bk-img2: "https://picsum.photos/g/2800/1260?blur";
 
-@font-face {
-font-family: "SAILORRegular";
-src:
-    url("../fonts/SAILORRegular.woff") format("woff"),
-    url("../fonts/SAILORRegular.woff2") format("woff2"),
-    url("../fonts/SAILOR.otf") format("opentype"),
-    url("../fonts/SAILORRegular.ttf") format("ttf"),
-    url("../fonts/SAILORRegular.svg#filename") format("svg");
-}
+@primary-font: Didot, 'Times New Roman';
 
 html, body {
     height: 100%;
-    background: #202034;
+    background: @bg-color-7;
 }
 
 header {
     text-align: center;
-    color: #fff;
-    background: #18bc9c;
+    color: @text-color-1;
+    background: @bg-color-1;
 
     background-size: cover;
     background-position: center center;
@@ -46,16 +48,14 @@ header .container {
 
 header .hero-text-lg .name {
     display: block;
-    //TODO: Fix for firefox, check for IE (okay in Chrome & Safari)
-    font-family: SAILORRegular, Courier;
+    font-family: @primary-font;
     //font-size: 8em;
     font-size:8vw;
 }
 
 header .hero-text-sm .name {
     display: block;
-    //TODO: Fix for firefox, check for IE (okay in Chrome & Safari)
-    font-family: SAILORRegular, Courier;
+    font-family: @primary-font;
     font-size: 2vw;
 }
 
@@ -63,21 +63,49 @@ header .hero-text-sm .name {
     font-size: 2vw;
 }
 
-
-#Malt1 {
-  font-family: SAILORRegular, Helvetica, Arial;
-  -moz-font-feature-settings: "swsh";
-  -webkit-font-feature-settings: "swsh";
-  font-feature-settings: "salt";
+//TODO: Add logo here - hide when mobile
+.navbar-inverse {
+    background-color: @bg-color-7;
+    border-color: @bg-color-7;
 }
 
-// header .hero-text .skills {
-//     font-size: 1.25vw;
-//     font-weight: 300;
+.navbar-inverse .navbar-brand {
+    padding: 10px 10px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: @text-color-1-inverse;
+    font-weight: bold;
+    font-family: 'Avenir Next', Helvetica, sans-serif ;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: @text-color-1-hover;
+    font-weight: bold;
+}
+
+// .navbar-inverse .navbar-nav > li > a:hover,
+// .navbar-inverse .navbar-nav > li > a:focus {
+//     color: #333;
+// }
+// .navbar-inverse .navbar-nav > .active > a,
+// .navbar-inverse .navbar-nav > .active > a:hover,
+// .navbar-inverse .navbar-nav > .active > a:focus {
+//     color: #555;
+//     background-color: #E7E7E7;
+// }
+// .navbar-inverse .navbar-nav > .open > a,
+// .navbar-inverse .navbar-nav > .open > a:hover,
+// .navbar-inverse .navbar-nav > .open > a:focus {
+//     color: #555;
+//     background-color: #D5D5D5;
 // }
 
+
+
 h2 {
-  font-family: "Avenir Next",sans-serif;
+  font-family: 'Avenir Next', Helvetica, sans-serif;
   font-size: 2em;
   // padding-top: 15px;
   margin-top: 15px;
@@ -94,7 +122,9 @@ section {
 
 section h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 4em;
+    font-weight: bold;
+    font-family: @primary-font;
 }
 
 section.bg-primary {
@@ -131,24 +161,24 @@ section.bg-parallax2 {
 
 //TODO: Reduce background code duplication
 
-section.bg-dark {
-    background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
-    background-image: linear-gradient(rgb(40, 40, 65), rgb(32, 32, 52) 100%);
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: rgb(32, 32, 52);
-    color: white;
-}
+// section.bg-dark {
+//     background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
+//     background-image: linear-gradient(rgb(40, 40, 65), rgb(32, 32, 52) 100%);
+//     background-position-x: initial;
+//     background-position-y: initial;
+//     background-size: initial;
+//     background-repeat-x: initial;
+//     background-repeat-y: initial;
+//     background-attachment: initial;
+//     background-origin: initial;
+//     background-clip: initial;
+//     background-color: rgb(32, 32, 52);
+//     color: white;
+// }
 
 section.bg-light {
     // background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
-    background: #023c65 linear-gradient(to bottom,#023c65,#052942 100%);
+    background: @bg-color-2 linear-gradient(to bottom,#fbf9f5,#fff 100%);
     //background-image: linear-gradient(rgb(1, 49, 84), rgb(4, 58, 96) 100%);
     background-position-x: initial;
     background-position-y: initial;
@@ -158,12 +188,48 @@ section.bg-light {
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
+    //TODO: check RGB
     background-color: rgb(2, 60, 101);
-    color: white;
+    color: #111111;
+}
+
+section.bg-mid-light {
+    // background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
+    background: @bg-color-3 linear-gradient(to bottom,#a1a1a1,#a1a1b1 100%);
+    //background-image: linear-gradient(rgb(1, 49, 84), rgb(4, 58, 96) 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    //TODO: check RGB
+    background-color: rgb(2, 60, 101);
+    color: #111111;
+}
+
+section.bg-mid-dark {
+    // background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
+    background: @bg-color-3 linear-gradient(to bottom,#464646,#464653 100%);
+    //background-image: linear-gradient(rgb(1, 49, 84), rgb(4, 58, 96) 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    //TODO: check RGB
+    background-color: rgb(2, 60, 101);
+    color: #111111;
 }
 
 footer {
-  color: white;
+  color: #111111;
+  background-color: @bg-color-7;
 }
 
 .text-accented {
@@ -174,10 +240,10 @@ footer {
 
 .text-accented:before, .text-accented:after {
   background-color: #fff;
-  border-radius: 3px;
+  // border-radius: 3px;
   content: " ";
   position: absolute;
-  height: 1vw;
+  height: .25vw;
   top: 0;
   width: 40%;
 }
@@ -185,11 +251,13 @@ footer {
 .text-accented:before {
   right: 60%;
   margin-right: 15px;
+  margin-top: 5px;
 }
 
 .text-accented:after {
   left: 60%;
   margin-left: 15px;
+  margin-top: 5px;
 }
 
 .content-wrapper{
@@ -203,7 +271,7 @@ footer {
 
 .footer-distributed{
       z-index: 1;
-	background-color: #202034;
+	background-color: @bg-color-7;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -215,7 +283,7 @@ footer {
 }
 
 .footer-distributed .footer-left p{
-	color: white;
+	color: @bg-color-7;
 	font-size: 14px;
 	margin: 0;
 }
@@ -255,7 +323,7 @@ footer {
 }
 
 #header-index {
-    background-image: url("/images/header-index.jpg");
+    background-image: url("/images/header-index.png");
 }
 
 #header-about {
