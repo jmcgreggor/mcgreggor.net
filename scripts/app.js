@@ -4,7 +4,7 @@
   var $ = window.jQuery;
   var App = window.App;
   var UserDevice = App.CheckViewport(window.document.documentElement.clientWidth);
-  var UserBrowser = App.CheckBrowser(window.navigator.userAgent);
+  //var UserBrowser = App.CheckBrowser(window.navigator.userAgent);
 
 
   $(document).ready(() => {
@@ -29,11 +29,7 @@
 
                myCircleType.radius(300).dir(-1);
 
-               if (UserBrowser == "Chrome" || UserBrowser == "Safari") {
-                 $('#CompanyName').html('&#xf02b;cGREGGOR');
-               } else {
-                 $('#CompanyName').html('McGREGGOR');
-               }
+              $('#CompanyName').html('MCGREGGOR');
 
             });
 
