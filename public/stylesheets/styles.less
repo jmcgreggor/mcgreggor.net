@@ -10,16 +10,16 @@
 @font-face {
 font-family: "SAILORRegular";
 src:
-url("../fonts/SAILORRegular.woff") format("woff"),
-url("../fonts/SAILORRegular.woff2") format("woff2"),
-url("../fonts/SAILOR.otf") format("opentype"),
-url("../fonts/SAILORRegular.ttf") format("ttf"),
-url("../fonts/SAILORRegular.svg#filename") format("svg");
+    url("../fonts/SAILORRegular.woff") format("woff"),
+    url("../fonts/SAILORRegular.woff2") format("woff2"),
+    url("../fonts/SAILOR.otf") format("opentype"),
+    url("../fonts/SAILORRegular.ttf") format("ttf"),
+    url("../fonts/SAILORRegular.svg#filename") format("svg");
 }
 
 html, body {
-  height: 100%;
-  background: #202034;
+    height: 100%;
+    background: #202034;
 }
 
 header {
@@ -46,22 +46,17 @@ header .container {
 
 header .hero-text-lg .name {
     display: block;
-    //TODO: Add alternate fonts below
     //TODO: Fix for firefox, check for IE (okay in Chrome & Safari)
-    font-family: SAILORRegular;
+    font-family: SAILORRegular, Courier;
     //font-size: 8em;
     font-size:8vw;
-    //font-weight: 1000;
 }
 
 header .hero-text-sm .name {
     display: block;
-    //TODO: Add alternate fonts below
     //TODO: Fix for firefox, check for IE (okay in Chrome & Safari)
-    font-family: SAILORRegular;
-    //font-size: 2em;
+    font-family: SAILORRegular, Courier;
     font-size: 2vw;
-    //font-weight: 200;
 }
 
 .hero-text-arc {
@@ -69,6 +64,12 @@ header .hero-text-sm .name {
 }
 
 
+#Malt1 {
+  font-family: SAILORRegular, Helvetica, Arial;
+  -moz-font-feature-settings: "swsh";
+  -webkit-font-feature-settings: "swsh";
+  font-feature-settings: "salt";
+}
 
 // header .hero-text .skills {
 //     font-size: 1.25vw;
