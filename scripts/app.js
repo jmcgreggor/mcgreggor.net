@@ -14,7 +14,7 @@
         (navbar.html || navbar-mobile.html) - may be able to just manipulate
         what is in the html file rather than calling a new one.
         */
-        $('[data-navbar="navbar-div"]').load("partials/navbar.html");
+       $('[data-navbar="navbar-div"]').load("partials/navbar.html");
 
 
         /* TODO: Use UserDevice to manipulate what is loaded
