@@ -26,6 +26,8 @@
 @bk-img2: "https://picsum.photos/g/2800/1260?blur";
 
 @primary-font: Didot, 'Times New Roman';
+@secondary-font: 'Avenir Next', Helvetica, sans-serif;
+
 
 html, body {
     height: 100%;
@@ -47,7 +49,7 @@ header {
     //position: fixed;
     width:100%;
     z-index: 1;
-    height: 90em;
+    height: 100%;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -56,8 +58,13 @@ header {
 //TODO: Fine tune header text/image and background based on viewport
 
 header .container {
-    padding-top: 25%;
-    padding-top: 25%;
+    padding-top: 20%;
+    padding-top: 20%;
+}
+
+header .container-mobile {
+    padding-top: 40%;
+    padding-top: 40%;
 }
 
 header .hero-text-lg .name {
@@ -74,11 +81,30 @@ header .hero-text-sm .name {
     font-size: 2vw;
 }
 
+
+
+header .mobile-header {
+  margin-top: 30%;
+}
+
+header .mobile-logo {
+  padding-bottom: 10vw;
+}
+
 header .hero-text-min .name {
     display: block;
-    font-family: @primary-font;
+    font-family: @secondary-font;
+    font-weight: bold;
     font-size: 5vw;
-    margin-top: 8vw;
+    margin-top: 2vw;
+}
+
+header .hero-text-minlg .name {
+    display: block;
+    font-family: @secondary-font;
+    font-weight: bold;
+    font-size: 6vw;
+    margin-top: 2vw;
 }
 
 header .arc-min-div {
@@ -102,6 +128,10 @@ header .arc-min-div {
     background-color: black;
 }
 
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: @bg-color-4;
+}
+
 .navbar-inverse .navbar-brand {
     padding: 10px 10px;
 }
@@ -109,7 +139,7 @@ header .arc-min-div {
 .navbar-inverse .navbar-nav > li > a {
     color: @text-color-1-inverse;
     font-weight: bold;
-    font-family: 'Avenir Next', Helvetica, sans-serif ;
+    font-family: @secondary-font;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -128,7 +158,7 @@ header .arc-min-div {
 
 
 h2 {
-  font-family: 'Avenir Next', Helvetica, sans-serif;
+  font-family: @secondary-font;
   font-size: 2em;
   // padding-top: 15px;
   margin-top: 15px;
@@ -214,6 +244,7 @@ section.bg-light {
     //TODO: check RGB
     background-color: rgb(2, 60, 101);
     color: #111111;
+    padding-top: 50%;
 }
 
 section.bg-mid-light {
@@ -347,7 +378,7 @@ footer {
 
 .mobile-logo {
     margin:auto;
-    width: 50%;
+    width: 65%;
     //height: 18em;
 }
 
