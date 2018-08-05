@@ -34,6 +34,7 @@
                   $('.navbar-brand').hide();
 
                 });
+
             };
 
         $('[data-header-about="header-about"]').load("partials/header-about.html");
