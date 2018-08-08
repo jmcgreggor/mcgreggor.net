@@ -1,289 +1,326 @@
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
 
+@font-primary: 'Lucida Grande', 'Avinir Next', 'Arial';
+@font-secondary: 'Didot', 'Times New Roman';
+@font-alt: 'Avenir Next', 'Helvetica', sans-serif;
 
-@bg-color-1: #111111;
-@text-color-1: #fbf9f5;
-@text-color-1-inverse: #111111;
-@text-color-1-hover: #790000;
 
-@bg-color-2: #464646;
-@text-color-2: #fbf9f5;
-@text-color-2-hover: #00aeef;
+//Bench Theme
+// @color-dark: #e5e8ee;
+// @color-mid-dark: #e5f4fa;
+// @color-bright: #fefbec;
+// @color-white: #fff;
+// @color-black: #000;
+// @color-mid-black: #898b8e;
+// @color-highlight: #fd4445;
+// @color-test: green;
+// @color-p: 222022;
+// @color-links: #000;
+// @img-bg: url("/images/header-index-large.jpeg");
 
-@bg-color-3: #a1a1a1;
-@text-color-3: #111111;
-@text-color-3-hover: #121a1e;
-
-@bg-color-4: #fbf9f5;
-@text-color-4: #111111;
-@text-color-4-hover: #790000;
-
-@highlight-color-1: #121a1e;
-@highlight-color-2: #790000;
-@highlight-color-3: #00aeef;
-
-@bk-img1: "https://picsum.photos/g/3200/1240?blur";
-@bk-img2: "https://picsum.photos/g/2800/1260?blur";
-
-@primary-font: Didot, 'Times New Roman';
-@secondary-font: 'Avenir Next', Helvetica, sans-serif;
-
+// Coffee Theme
+@color-dark: #cddfcd;
+@color-mid-dark: #ede1d1;
+@color-bright: #fefbec;
+@color-white: #fff;
+@color-black: #000;
+@color-mid-black: #222022;
+@color-highlight: #fd4445;
+@color-test: green;
+@color-p: 222022;
+@color-links: #e5f4fa;
+@img-bg: url("/images/IMG_6314-3.jpeg");
 
 html, body {
     height: 100%;
-    background: @bg-color-4;
 }
 
 header {
     text-align: center;
-    color: @text-color-1;
-    background: @bg-color-1;
-
+    color: @color-white;
+    background: @color-bright;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-
-    //background-attachment: fixed;
     background-size: cover;
-
-    //position: fixed;
     width:100%;
     z-index: 1;
-    height: 100%;
     overflow: hidden;
     top: 0;
     left: 0;
 }
 
-//TODO: Fine tune header text/image and background based on viewport
-
 header .container {
-    padding-top: 20%;
-    padding-top: 20%;
+    height: 50vw;
+    padding-top: 8%;
+    background-position: center center;
+    justify-content: center;
 }
 
 header .container-mobile {
-    padding-top: 40%;
-    padding-top: 40%;
+    height: 130vw;
+    padding-top: 28%;
+}
+
+header .container-standard {
+    padding-top: 28%;
+    background-position: center center;
+    justify-content: center;
+}
+
+header .logo-mob {
+  padding-bottom: 5vw;
 }
 
 header .hero-text-lg .name {
     display: block;
-    font-family: @primary-font;
-    //font-size: 8em;
-    font-size:8vw;
-    text-shadow: 2px 2px #111111;
+    font-family: @font-primary;
+    font-size: 7vw;
+    font-weight: bold;
+    background-position: center center;
+    text-shadow: 2px 2px 8px @color-mid-black;
 }
 
 header .hero-text-sm .name {
     display: block;
-    font-family: @primary-font;
+    font-family: @font-primary;
     font-size: 2vw;
-}
-
-
-
-header .mobile-header {
-  margin-top: 30%;
-}
-
-header .mobile-logo {
-  padding-bottom: 10vw;
-}
-
-header .hero-text-min .name {
-    display: block;
-    font-family: @secondary-font;
     font-weight: bold;
-    font-size: 5vw;
-    margin-top: 2vw;
+    text-shadow: 2px 2px 4px @color-mid-black;
 }
 
-header .hero-text-minlg .name {
+header .hero-text-mob-lg .name {
     display: block;
-    font-family: @secondary-font;
-    font-weight: bold;
+    font-family: @font-primary;
     font-size: 6vw;
-    margin-top: 2vw;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px @color-mid-black;
 }
 
-header .arc-min-div {
-  width: 700px;
-  margin: auto;
+header .hero-text-mob-sm .name {
+    display: block;
+    font-family: @font-primary;
+    font-size: 3vw;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px @color-mid-black;
 }
 
-
-.hero-text-arc {
+header .hero-text-arc {
+    display: block;
+    font-family: @font-alt;
     font-size: 2vw;
-}
-
-//TODO: Add logo here - hide when mobile
-.navbar-inverse {
-    background-color: @bg-color-4;
-    border-color: @bg-color-4;
-    margin-bottom: 0px;
-}
-
-.navbar-inverse .navbar-toggle .icon-bar {
-    background-color: black;
-}
-
-.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-    background-color: @bg-color-4;
-}
-
-.navbar-inverse .navbar-brand {
-    padding: 10px 10px;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-    color: @text-color-1-inverse;
     font-weight: bold;
-    font-family: @secondary-font;
+    text-shadow: 2px 2px 5px @color-mid-black;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-    color: @highlight-color-2;
-    font-weight: bold;
-}
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-    color: @highlight-color-2;
-    background-color: @bg-color-2;
-}
-
-
-
-h2 {
-  font-family: @secondary-font;
-  font-size: 2em;
-  // padding-top: 15px;
-  margin-top: 15px;
-}
-
-hr.star-light {
-    border-color: #fff;
+body {
+  background-color: @color-mid-black;
 }
 
 section {
-    padding: 300px 0;
+    padding: 200px 0;
     width: 100%;
 }
 
-section h2 {
-    margin: 0;
-    font-size: 4em;
-    font-weight: bold;
-    font-family: @primary-font;
+h1, h3 {
+  font-family: @font-primary;
 }
 
-section.bg-primary {
-    color: #fff;
-    background-color: #023c65;
-    // background-color: #b9763f;
+h2, h4 {
+  font-family: @font-secondary;
 }
 
-//TODO: Reduce paralax code duplication
-
-section.bg-parallax1 {
-    background-image: url("@{bk-img1}");
-    height: 500px;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    color: #fff;
+p {
+   font-family: @font-alt;
+   font-size: 120%;
 }
 
-section.bg-parallax2 {
-    background-image: url("@{bk-img2}");
-    height: 500px;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    color: #fff;
+p .fancy {
+   font-family: @font-secondary;
+   font-size: 120%;
 }
 
-//TODO: Reduce background code duplication
+a {
+  color: @color-links;
+  font-family: @font-alt;
+}
 
-// section.bg-dark {
-//     background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
-//     background-image: linear-gradient(rgb(40, 40, 65), rgb(32, 32, 52) 100%);
-//     background-position-x: initial;
-//     background-position-y: initial;
-//     background-size: initial;
-//     background-repeat-x: initial;
-//     background-repeat-y: initial;
-//     background-attachment: initial;
-//     background-origin: initial;
-//     background-clip: initial;
-//     background-color: rgb(32, 32, 52);
-//     color: white;
+///////////// NAVBAR CLASS OVERRIDES ///////////////
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+  margin-bottom: 0;
+  background-color: @color-mid-black;
+  color: @color-white;
+  font-family: @font-alt;
+}
+
+.navbar .navbar-toggle .icon-bar {
+  background-color: @color-white;
+}
+
+.navbar .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: @color-mid-black;
+}
+
+.navbar .navbar-brand {
+    padding: 10px 10px;
+}
+
+.navbar .navbar-nav > li > a {
+  color: @color-white;
+  background-color: @color-mid-black
+}
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus {
+  color: @color-bright;
+  background-color: @color-mid-black;
+}
+
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus {
+    color: @color-white;
+    background-color: @color-mid-black;
+}
+
+@speed: 200ms;
+@easing: cubic-bezier(0.7, 0, 0, 0.7);
+
+.navbar-toggle {
+  overflow: hidden;
+
+  .icon-bar {
+    transition: opacity, transform;
+    transition-duration: @speed;
+    transition-timing-function: @easing;
+  }
+
+  &:not(.collapsed) {
+    .icon-bar {
+      &:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      &:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+//TODO: Fix navbar hamburger icon to reset state when tapped outside
+
+///////////// MISC CLASS OVERRIDES ///////////////
+
+// .hover-image {
+//   height: 40px;
+//   width: 40px;
+//   margin: auto;
 // }
 
-section.bg-light {
-    // background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
-    background: @bg-color-2 linear-gradient(to bottom,#fbf9f5,#fff 100%);
-    //background-image: linear-gradient(rgb(1, 49, 84), rgb(4, 58, 96) 100%);
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    // background-attachment: initial;
-    // background-origin: initial;
-    // background-clip: initial;
-    //TODO: check RGB
-    background-color: rgb(2, 60, 101);
-    color: #111111;
-    padding-top: 50%;
+.hover-container {
+  position: relative;
+  width: 50%;
+  display: flex;
 }
 
-section.bg-mid-light {
-    // background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
-    background: @bg-color-3 linear-gradient(to bottom,#a1a1a1,#787878 100%);
-    //background-image: linear-gradient(rgb(1, 49, 84), rgb(4, 58, 96) 100%);
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    // background-attachment: initial;
-    // background-origin: initial;
-    // background-clip: initial;
-    //TODO: check RGB
-    background-color: rgb(2, 60, 101);
-    color: #111111;
+.hover-image {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: auto;
 }
 
-section.bg-mid-dark {
-    // background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
-    background: @bg-color-3 linear-gradient(to bottom,#464646,#363535 100%);
-    //background-image: linear-gradient(rgb(1, 49, 84), rgb(4, 58, 96) 100%);
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    // background-attachment: initial;
-    // background-origin: initial;
-    // background-clip: initial;
-    //TODO: check RGB
-    background-color: rgb(2, 60, 101);
-    color: #fff;
+.hover-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 50%;
+  height: 0;
+  transition: .5s ease;
+  margin: auto;
 }
 
-footer {
-  color: #111111;
-  background-color: @bg-color-4;
+.hover-container:hover .hover-overlay {
+  height: 100%;
+}
+
+.hover-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 420) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo-mob img {
+    margin: auto;
+    width: 60%;
+    height: auto;
+}
+
+.logo-std img {
+    margin: auto;
+    width: 40%;
+    height: auto;
+}
+
+.div-accented {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .text-accented {
@@ -294,50 +331,62 @@ footer {
 
 .text-accented:before, .text-accented:after {
   background-color: #fff;
-  // border-radius: 3px;
+  border-radius: 1px;
+  box-shadow: 1px 1px 5px @color-mid-black;
   content: " ";
   position: absolute;
-  height: .25vw;
-  top: 0;
-  width: 40%;
+  height: 1.50vw;
+  top: 48%;
+  width: 35%;
 }
 
 .text-accented:before {
-  right: 60%;
-  margin-right: 15px;
+  right: 65%;
+  margin-right: 45px;
   margin-top: 5px;
 }
 
 .text-accented:after {
-  left: 60%;
-  margin-left: 15px;
+  left: 65%;
+  margin-left: 45px;
   margin-top: 5px;
 }
 
-.content-wrapper{
-    background-color: white;
-    top: 65em;
-    min-height: 12%;
-    position:absolute;
-    z-index: 2;
-    width: 100%;
+///////////// SECTION CLASS OVERRIDES ///////////////
+
+.sec-color-primary {
+    background-color: @color-dark;
+    color: @color-p;
 }
 
+.sec-color-secondary {
+    background-color: @color-mid-dark;
+    color: @color-p;
+}
+
+.sec-color-alt {
+  background-color: @color-white;
+  color: @color-p;
+}
+
+///////////// FOOTER CLASS OVERRIDES ///////////////
+
 .footer-distributed{
-      z-index: 1;
-	background-color: @bg-color-4;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1;
+	background-color: @color-mid-black;
+  color: @color-white;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: normal 16px sans-serif;
 
 	padding: 45px 50px;
-	margin-top: 80px;
+	margin-top: 20px;
+    font-size: 90%;
 }
 
 .footer-distributed .footer-left p{
-	color: @bg-color-4;
+	color: @color-bright;
 	font-size: 14px;
 	margin: 0;
 }
@@ -376,44 +425,97 @@ footer {
 	margin-left: 3px;
 }
 
-.mobile-logo {
-    margin:auto;
-    width: 65%;
-    //height: 18em;
+// STANDARD COMPUTERS TO LARGE MOBILE DEVICES (TABLETS)
+@media (min-width: 420px) {
+    #header-index {
+         background-image: @img-bg;
+    }
+
+    .sec-style:before, .sec-style:after, .sec-style-base:before {
+      transform: skewY(0deg);
+    }
+
+    .divider {
+              padding: 0;
+
+    }
+    .para-divider {
+        background-image: @img-bg;
+        height: 20px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+    }
+
 }
 
-/* resize images */
-.mobile-logo img {
-    width: 100%;
-    height: auto;
+// SMALL MOBILE DEVICES
+@media (max-width: 420px) {
+    #header-index {
+         background-image: @img-bg;
+         //TODO: Create small render of the image for mobile
+
+    }
+
+    .divider {
+      display: none;
+    }
+
+    .sec-style:before, .sec-style:after, .sec-style-base:before {
+      transform: skewY(3.5deg);
+    }
+
+    .sec-style {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sec-style:before {
+      background: inherit;
+      top: 0;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      //transform: skewY(1.5deg);
+      transform-origin: 100%;
+      z-index: -1;
+    }
+
+    .sec-style:after {
+      background: inherit;
+      bottom: 1;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transform-origin: 100%;
+      //transform: skewY(1.5deg);
+      z-index: -1;
+    }
+
+    .sec-style-base {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sec-style-base:before {
+      background: inherit;
+      top: 0;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      //transform: skewY(1.5deg);
+      transform-origin: 100%;
+      z-index: -1;
+    }
 }
-
-#header-index {
-     background-image: url("/images/header-index.png");
-}
-
-#header-about {
-    background-image: url("/images/header-about.jpg");
-}
-
-#header-recommend {
-    background-image: url("/images/header-recommend.jpg");
-}
-
-
-// @media (max-width: 600px) {
-//
-// 	.footer-distributed .footer-left,
-// 	.footer-distributed .footer-right{
-// 		text-align: center;
-// 	}
-//
-// 	.footer-distributed .footer-right{
-// 		float: none;
-// 		margin: 0 auto 20px;
-// 	}
-//
-// 	.footer-distributed .footer-left p.footer-links{
-// 		line-height: 1.8;
-// 	}
-// }

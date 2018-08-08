@@ -5,11 +5,11 @@
 
   function CheckViewport(deviceWidth) {
 
-      if(deviceWidth >= 768) {
+      if(deviceWidth >= 420) {
           console.log("The viewport is larger than a standrd mobile phone: " + deviceWidth);
           return "large-viewport";
 
-      } else if (deviceWidth < 768) {
+      } else if (deviceWidth < 420) {
           console.log("The viewport is equal to a standrd mobile device: " + deviceWidth);
           return "small-viewport";
 
