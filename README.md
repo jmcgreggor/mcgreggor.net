@@ -9,6 +9,7 @@ This is a build for creating the mcgreggor.net website that which is run within 
 3. Node.js
 4. Nodemon (for dev only)
 5. Less (stylesheets)
+6. Circletype.js
 
 ## Integrations
 

@@ -11,12 +11,18 @@
 
         if (UserDevice == "large-viewport") {
 
+          $("media-test-divider").addClass("media-large-divider");
+          $("media-test-para-divider").addClass("media-large-para-divider");
+
             $('[data-header-index="header-index"]').load("partials/header-index.html", () => {
                const myCircleType = new CircleType(document.getElementById('bendyArc'));
                myCircleType.radius(400).dir(-1);
             });
 
             $('header').css("background-attachment","fixed");
+
+            $("media-test-divider").addClass("media-large-divider");
+            $("media-test-para-divider").addClass("media-large-para-divider");
 
         } else {
 
