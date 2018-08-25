@@ -154,7 +154,7 @@ a {
 ///////////// HEADER CLASS OVERRIDES ///////////////
 
 header .container {
-    height: 50vw;
+    height: 55vw;
     padding-top: 8%;
 
     justify-content: center;
@@ -199,68 +199,13 @@ header .hero-text-arc {
     color: @color-highlight-2;
 }
 
-// .hover-image {
-//   height: 40px;
-//   width: 40px;
-//   margin: auto;
-// }
-
-// .hover-container {
-//   position: relative;
-//   width: 50%;
-//   display: flex;
-// }
-//
-// .hover-image {
-//   display: block;
-//   width: 50%;
-//   height: auto;
-//   margin: auto;
-// }
-//
-// .hover-overlay {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   background-color: @color-highlight-1;
-//   overflow: hidden;
-//   width: 50%;
-//   height: 0;
-//   transition: .4s ease;
-//   margin: auto;
-// }
-//
-// .hover-container:hover .hover-overlay {
-//   height: 100%;
-// }
-//
-// .hover-text {
-//   color: white;
-//   font-size: 20px;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   -webkit-transform: translate(-50%, -50%);
-//   -ms-transform: translate(-50%, -50%);
-//   transform: translate(-50%, -50%);
-//   text-align: center;
-// }
-//
-// .column {
-//     float: left;
-//     width: 33.33%;
-//     padding: 5px;
-// }
-//
-// /* Clearfix (clear floats) */
-// .row::after {
-//     content: "";
-//     clear: both;
-//     display: table;
-// }
-
 ///////////// FLEX GALLERY CLASS OVERRIDES ///////////////
+.flex-gallery-mobile {
+     margin: auto;
+     width: 50%;
+     display: block;
+     padding-top: 30px;
+}
 
 .flex-gallery {
   margin-left: 5vw;
@@ -301,47 +246,7 @@ header .hero-text-arc {
   .flex-gallery div { margin: 0; }
 }
 
-// .foo-image {
-//   display: block;
-//   width: 100%;
-//   height: auto;
-// }
-//
-// .foo-overlay {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   height: 100%;
-//   width: 100%;
-//   opacity: 0;
-//   transition: .5s ease;
-//   background-color: #008CBA;
-// }
-//
-// .foo-container:hover .foo-overlay {
-//   opacity: 1;
-// }
-//
-// .foo-text {
-//   color: white;
-//   font-size: 20px;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   -webkit-transform: translate(-50%, -50%);
-//   -ms-transform: translate(-50%, -50%);
-//   transform: translate(-50%, -50%);
-//   text-align: center;
-// }
-//
-//
-//
-//
-//
-
-///////////// PARAGRAPH COLUMN OVERRIDES ///////////////
+///////////// PARAGRAPH COLUMN CLASS OVERRIDES ///////////////
 
 .text-column {
     float: left;
@@ -361,7 +266,7 @@ header .hero-text-arc {
     }
 }
 
-///////////// IMG COLUMN OVERRIDES ///////////////
+///////////// FLEX LIST CLASS OVERRIDES ///////////////
 
 .flex-list {
    flex: 1 1 auto;
@@ -375,10 +280,6 @@ header .hero-text-arc {
 
   margin-left: 1.5vw;
   margin-right: 1.5vw;
-}
-
-.thumbnail-item:hover {
-  transform: scale(1.2);
 }
 
 .thumbnail-list {
@@ -423,7 +324,22 @@ header .hero-text-arc {
 
 }
 
+///////////// IMG CLASS OVERRIDES ///////////////
+
+.thumbnail-item:hover {
+  transform: scale(1.05);
+  -ms-filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
 ///////////// MISC CLASS OVERRIDES ///////////////
+
+.thumbnail-item {
+    -ms-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
 
 .logo-mob img {
     margin: auto;
@@ -564,6 +480,9 @@ header .hero-text-arc {
         background-size: cover;
         color: #fff;
     }
+    .flex-gallery-mobile {
+       display: none;
+    }
 }
 
 /// SMALL MOBILE DEVICES
@@ -635,5 +554,17 @@ header .hero-text-arc {
         //transform: skewY(1.5deg);
         transform-origin: 100%;
         z-index: -1;
+    }
+
+    .flex-gallery {
+       display: none;
+    }
+
+    .thumbnail-list {
+      padding: 35px 35px;
+    }
+
+    .text-flex {
+      text-align: center;
     }
 }
