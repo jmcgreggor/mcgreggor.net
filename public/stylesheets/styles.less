@@ -12,12 +12,18 @@
 @color-highlight-1: #327a8f; //Mountain blue
 @color-highlight-2: #cc5500; //Burnt orange
 // @color-highlight-3:
-// @color-highlight-4:
-// @color-highlight-5:
 @color-bg: #000;
 @color-test: yellow;
-@img-bg: url("/images/header-mountain-lg.jpg");
-@img-bg-sm: url("/images/header-mountain-sm.jpg");
+@img-bg1: url("/images/header-mountain-1-lg.jpg");
+@img-bg1-sm: url("/images/header-mountain-1-sm.jpg");
+@img-bg2: url("/images/header-mountain-2-lg.jpg");
+@img-bg2-sm: url("/images/header-mountain-2-sm.jpg");
+@img-bg3: url("/images/header-mountain-3-lg.jpg");
+@img-bg3-sm: url("/images/header-mountain-3-sm.jpg");
+@img-bg4: url("/images/header-mountain-4-lg.jpg");
+@img-bg4-sm: url("/images/header-mountain-4-sm.jpg");
+@img-bg5: url("/images/header-mountain-5-lg.jpg");
+@img-bg5-sm: url("/images/header-mountain-5-sm.jpg");
 
 html, body {
     height: 100%;
@@ -200,6 +206,7 @@ header .hero-text-arc {
 }
 
 ///////////// FLEX GALLERY CLASS OVERRIDES ///////////////
+
 .flex-gallery-mobile {
      margin: auto;
      width: 50%;
@@ -324,22 +331,7 @@ header .hero-text-arc {
 
 }
 
-///////////// IMG CLASS OVERRIDES ///////////////
-
-.thumbnail-item:hover {
-  transform: scale(1.05);
-  -ms-filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-}
-
 ///////////// MISC CLASS OVERRIDES ///////////////
-
-.thumbnail-item {
-    -ms-filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
 
 .logo-mob img {
     margin: auto;
@@ -397,6 +389,23 @@ header .hero-text-arc {
   margin-left: 20vw;
   margin-right: 20vw;
 }
+////////
+
+
+.thumbnail-item {
+    -ms-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.thumbnail-item:hover {
+  transform: scale(1.05);
+
+  -ms-filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
 
 ///////////// SECTION CLASS OVERRIDES ///////////////
 
@@ -411,6 +420,10 @@ header .hero-text-arc {
 }
 
 ///////////// FOOTER CLASS OVERRIDES ///////////////
+
+.footer-distributed p{
+  color: @color-text-white;
+}
 
 .footer-distributed{
   z-index: 1;
@@ -460,7 +473,15 @@ header .hero-text-arc {
 
 @media (min-width: 420px) {
     #header-index {
-       background-image: @img-bg;
+       background-image: @img-bg1;
+    }
+
+    #header-about {
+       background-image: @img-bg2;
+    }
+
+    #header-recommend {
+       background-image: @img-bg3;
     }
 
     .sec-style:before, .sec-style:after, .sec-style-base:before {
@@ -472,7 +493,6 @@ header .hero-text-arc {
     }
 
     .para-divider {
-        background-image: @img-bg;
         height: 20px;
         background-attachment: fixed;
         background-position: center;
@@ -480,16 +500,47 @@ header .hero-text-arc {
         background-size: cover;
         color: #fff;
     }
+
+    .para-div-1 {
+       background-image: @img-bg1;
+    }
+
+    .para-div-2 {
+       background-image: @img-bg2;
+    }
+
+    .para-div-3 {
+       background-image: @img-bg3;
+    }
+
+    .para-div-4 {
+       background-image: @img-bg4;
+    }
+
+    .para-div-5 {
+       background-image: @img-bg5;
+    }
+
+
     .flex-gallery-mobile {
        display: none;
     }
 }
 
+
 /// SMALL MOBILE DEVICES
 
 @media (max-width: 420px) {
     #header-index {
-         background-image: @img-bg-sm;
+         background-image: @img-bg1-sm;
+    }
+
+    #header-about {
+         background-image: @img-bg2-sm;
+    }
+
+    #header-recommend {
+       background-image: @img-bg3-sm;
     }
 
     h1 {
@@ -567,4 +618,12 @@ header .hero-text-arc {
     .text-flex {
       text-align: center;
     }
+
+    .thumbnail-item {
+        -ms-filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+
+
 }
