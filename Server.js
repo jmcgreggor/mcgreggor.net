@@ -21,6 +21,14 @@ router.get("/recommend",function(req,res){
   res.sendFile(viewsPath + "recommend.html");
 });
 
+router.get("/strengths",function(req,res){
+  res.sendFile(viewsPath + "strengths.html");
+});
+
+router.get("/thoughts",function(req,res){
+  res.sendFile(viewsPath + "thoughts.html");
+});
+
 router.get("/less.js",function(req,res){
   res.sendFile(path + "/node_modules/less/dist/less.js");
 });
