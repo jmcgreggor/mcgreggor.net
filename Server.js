@@ -13,20 +13,24 @@ router.get("/",function(req,res){
   res.sendFile(viewsPath + "index.html");
 });
 
-router.get("/about",function(req,res){
-  res.sendFile(viewsPath + "about.html");
+router.get("/experience",function(req,res){
+  res.sendFile(viewsPath + "experience.html");
+});
+
+router.get("/profile",function(req,res){
+  res.sendFile(viewsPath + "profile.html");
+});
+
+router.get("/history",function(req,res){
+  res.sendFile(viewsPath + "history.html");
 });
 
 router.get("/recommend",function(req,res){
   res.sendFile(viewsPath + "recommend.html");
 });
 
-router.get("/strengths",function(req,res){
-  res.sendFile(viewsPath + "strengths.html");
-});
-
-router.get("/thoughts",function(req,res){
-  res.sendFile(viewsPath + "thoughts.html");
+router.get("/site",function(req,res){
+  res.sendFile(viewsPath + "site.html");
 });
 
 router.get("/less.js",function(req,res){

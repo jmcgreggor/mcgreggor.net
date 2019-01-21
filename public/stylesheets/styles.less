@@ -1,13 +1,31 @@
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
 
+@font-face {
+font-family: 'Ariona-Regular';
+src:
+   url('../fonts/Ariona-Regular.eot') format('eot');
+src:
+   url('../fonts/Ariona-Regular.ttf') format('truetype'),
+   url('../fonts/Ariona-Regular.woff2') format('woff2'),
+   url('../fonts/Ariona-Regular.woff') format('woff'),
+   url('../fonts/Ariona-Regular.otf') format('opentype');
+   font-style: normal;
+src:
+   local(font 'Ariona-Regular'), url('../fonts/Ariona-Regular.ttf') format('truetype');
+}
+
 ///////////// COMMON STYLES ///////////////
-@font-primary: 'Avenir Next', 'Helvetica', sans-serif;
-@font-secondary: 'Didot', 'Times New Roman';
-@font-alt: 'Zapfino', cursive;
+// @font-primary: 'Verdana', 'Helvetica', sans-serif;
+@font-primary: 'Times New Roman','Century Gothic';
+@font-headings: 'Ariona-Regular', 'Avenir Next', 'Helvetica', sans-serif;
+@font-alt: 'Verdana', 'Helvetica', sans-serif;
+@font-alt-serif: 'Didot','Century Gothic','Times New Roman';
+@font-fancy: 'Zapfino', cursive;
+@font-links: @font-alt;
 
 @color-text-white: #fff;
 @color-text-dark: #222122;
-@color-text-dark-alt: #000;
+@color-text-dark-alt: #1e1e1e;
 @color-div-light: #fff;
 @color-div-dark: #e9e9e9;
 @color-links:#0077cc;
@@ -15,26 +33,27 @@
 @color-test: yellow;
 
 ///////////// PAGE THEMES ///////////////
-
 @color-highlight-1: #327a8f; //Mountain blue
-@color-highlight-2: #7851a9; //Royal purple
-@color-highlight-3: #cc5500; //Burnt orange
+@color-highlight-2: #cc5500; //Burnt orange
+@color-highlight-3: #7851a9; //Royal purple
 @color-highlight-4: #355e3b; //Hunter green
 @color-highlight-5: #3c0069; //Dark indigo
+@color-highlight-6: #fbcc5b; //Mustardish yellow
 
 @img-bg1: url("/images/header-mountain-1-lg.jpg");
 @img-bg1-sm: url("/images/header-mountain-1-sm.jpg");
-@img-bg2: url("/images/header-mountain-2-lg.jpg");
-@img-bg2-sm: url("/images/header-mountain-2-sm.jpg");
-@img-bg3: url("/images/header-mountain-3-lg.jpg");
-@img-bg3-sm: url("/images/header-mountain-3-sm.jpg");
+@img-bg2: url("/images/header-mountain-3-lg.jpg");
+@img-bg2-sm: url("/images/header-mountain-3-sm.jpg");
+@img-bg3: url("/images/header-mountain-2-lg.jpg");
+@img-bg3-sm: url("/images/header-mountain-2-sm.jpg");
 @img-bg4: url("/images/header-mountain-4-lg.jpg");
 @img-bg4-sm: url("/images/header-mountain-4-sm.jpg");
 @img-bg5: url("/images/header-mountain-5-lg.jpg");
 @img-bg5-sm: url("/images/header-mountain-5-sm.jpg");
+@img-bg6: url("/images/header-mountain-6-lg.jpg");
+@img-bg6-sm: url("/images/header-mountain-6-sm.jpg");
 
-/////////////////////////////////////////
-
+/////////// ELEMENT OVERRIDES ///////////
 html, body {
     height: 100%;
 }
@@ -47,6 +66,7 @@ header {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: black;
 
     color: @color-text-white;
     font-weight: bold;
@@ -65,39 +85,40 @@ body {
 }
 
 section {
-    padding: 200px 0;
+    padding: 100px 0;
     width: 100%;
 }
 
-h1 {
-    font-family: @font-alt;
-    font-weight: bold;
-    padding-bottom: 3%
+h1, h2, h3, h4 {
+    font-family: @font-headings;
 }
 
-h4 {
-    padding-bottom: 2vw;
+h1, h3 {
+    font-weight: bold;
 }
 
 p {
-    color: @color-text-dark-alt;
-    font-size: 110%;
-}
-
-p .fancy {
-    font-family: @font-secondary;
+    font-family: @font-primary;
     font-size: 120%;
 }
 
+// a {
+//    color: @color-links;
+//    font-family: @font-links;
+// }
+
 a {
    color: @color-links;
-   font-family: @font-primary;
+   font-family: @font-links;
+
+}
+
+ul {
+  padding: 0;
 }
 
 ///////////// NAVBAR CLASS OVERRIDES ///////////////
-
 //TODO: Fix navbar hamburger icon to reset state when tapped outside
-
 * {
     box-sizing: border-box;
 }
@@ -106,7 +127,7 @@ a {
   margin-bottom: 0;
   background-color: @color-text-dark-alt;
   color: @color-text-white;
-  font-family: @font-primary;
+  font-family: @font-alt;
 }
 
 .navbar .navbar-toggle .icon-bar {
@@ -129,6 +150,7 @@ a {
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
   color: @color-highlight-1;
+
   background-color: @color-text-dark-alt;
 }
 
@@ -168,16 +190,36 @@ a {
 }
 
 ///////////// HEADER CLASS OVERRIDES ///////////////
-
 header .container {
     height: 55vw;
-    padding-top: 8%;
+    padding-top: 7%;
+
+    justify-content: center;
+}
+
+header .container-alt {
+    height: 40vw;
+    padding-top: 12%;
+
+
+    justify-content: center;
+}
+
+header .container-alt-mobile {
+    height: 70vw;
+    padding-top: 22%;
+
 
     justify-content: center;
 }
 
 header .container-mobile {
-    height: 130vw;
+    height: 100vw;
+    // padding-top: 20%;
+}
+
+header .container-mobile-alt {
+    height: 100vw;
     padding-top: 28%;
 }
 
@@ -191,27 +233,63 @@ header .logo-mob {
 
 header .hero-text-lg {
     font-size: 7vw;
-    text-shadow: 2px 2px 8px @color-text-dark-alt;
+    font-family: @font-primary;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
+}
+
+header .hero-text-lg-alt {
+    font-size: 5vw;
+    font-family: @font-alt;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
 }
 
 header .hero-text-sm {
-    font-size: 3vw;
-    text-shadow: 1px 1px 3px @color-text-dark-alt;
+    font-size: 4vw;
+    font-family: @font-fancy;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
+}
+
+header .hero-text-sm-alt {
+    font-size: 7vw;
     font-family: @font-alt;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
 }
 
 header .hero-text-arc {
     font-size: 2vw;
-    text-shadow: 2px 2px 5px @color-text-dark-alt;
-    font-family: @font-alt;
+    font-family: @font-fancy;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+}
 
+.header-fancy {
+  font-family: @font-fancy;
+  font-size: 3vw;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
+}
+
+.header-fancy-mobile {
+  font-family: @font-fancy;
+  font-size: 5vw;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
+}
+
+.header-alt {
+  font-size: 4vw;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
+}
+
+.header-alt-sm {
+  font-size: 8vw;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
 }
 
 .h1-index-alt {
     color: @color-highlight-1;
 }
 
-.h1-about-alt {
+.h1-experience-alt {
     color: @color-highlight-2;
 }
 
@@ -227,11 +305,24 @@ header .hero-text-arc {
     color: @color-highlight-5;
 }
 
-///////////// FLEX GALLERY CLASS OVERRIDES ///////////////
+.h1-site-alt {
+    color: @color-highlight-6;
+}
 
+.secondary-header {
+    font-size: 8vw;
+}
+
+///////////// FLEX GALLERY CLASS OVERRIDES ///////////////
 .flex-gallery-mobile {
      margin: auto;
      width: 50%;
+     display: block;
+     padding-top: 30px;
+}
+
+.flex-gallery-alt {
+     margin: auto;
      display: block;
      padding-top: 30px;
 }
@@ -266,17 +357,21 @@ header .hero-text-arc {
   height: auto;
 }
 
+.flex-gallery div img {
+  width: 100%;
+  height: auto;
+}
+
 .gallery-div {
   position: relative;
   width: 50%;
 }
 
-@media screen and (max-width: 400px) {
-  .flex-gallery div { margin: 0; }
-}
+// @media screen and (max-width: 300px) {
+//   .flex-gallery div { margin: 0; }
+// }
 
 ///////////// PARAGRAPH COLUMN CLASS OVERRIDES ///////////////
-
 .text-column {
     float: left;
     width: 50%;
@@ -289,6 +384,7 @@ header .hero-text-arc {
     clear: both;
 }
 
+// This specifc override is needed for arranging columns on small screens
 @media screen and (max-width: 600px) {
     .text-column {
         width: 100%;
@@ -296,7 +392,6 @@ header .hero-text-arc {
 }
 
 ///////////// FLEX LIST CLASS OVERRIDES ///////////////
-
 .flex-list {
    flex: 1 1 auto;
    display: flex;
@@ -326,7 +421,6 @@ header .hero-text-arc {
 .thumbnail-image {
   width: 100%;
   display: block;
-
 }
 
 @media all and (max-width: 420px) {
@@ -350,10 +444,12 @@ header .hero-text-arc {
   .thumbnail-item + .thumbnail-item {
     margin-top: 20px;
   }
-
 }
 
 ///////////// MISC CLASS OVERRIDES ///////////////
+.sec-primary {
+    background-color: @color-div-light;
+}
 
 .logo-mob img {
     margin: auto;
@@ -363,7 +459,7 @@ header .hero-text-arc {
 
 .logo-std img {
     margin: auto;
-    width: 40%;
+    width: 35%;
     height: auto;
 }
 
@@ -381,25 +477,51 @@ header .hero-text-arc {
 .text-accented:before, .text-accented:after {
   background-color: #fff;
   border-radius: 1px;
-  box-shadow: 1px 1px 5px @color-text-dark-alt;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   content: " ";
   position: absolute;
-  height: 1.50vw;
+  height: 1.75vw;
   top: 48%;
-  width: 35%;
+  width: 85%;
 }
 
 .text-accented:before {
   right: 65%;
   margin-right: 45px;
-  margin-top: 5px;
 }
 
 .text-accented:after {
   left: 65%;
   margin-left: 45px;
-  margin-top: 5px;
 }
+
+.text-accented-alt {
+  line-height: 0.5;
+  text-align: center;
+  position: relative;
+}
+
+.text-accented-alt:before, .text-accented-alt:after {
+  background-color: #fff;
+  border-radius: 1px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  content: " ";
+  position: absolute;
+  height: .25vw;
+  top: 20%;
+  width: 85%;
+}
+
+.text-accented-alt:before {
+  right: 10%;
+  margin-right: 2px;
+}
+
+.text-accented-alt:after {
+  left: 10%;
+  margin-left: 2px;
+}
+
 
 .profile-pic {
   margin:auto;
@@ -407,12 +529,45 @@ header .hero-text-arc {
   padding-bottom: 5vw;
 }
 
-.intro-p {
+.p-main {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.p-alt {
   margin-left: 20vw;
   margin-right: 20vw;
 }
-////////
 
+.profile-type {
+  font-family: @font-alt;
+  font-weight:bold;
+  font-size: 100%;
+  border-style:solid;
+  text-align: center;
+  margin: auto;
+}
+
+.hr-alt {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.reccomend:hover {
+  background-color: #f3eef6;
+  -webkit-transition: background-color 1.5s;
+  transition: background-color 1.5s;
+}
+
+.strong {
+  font-weight: bold;
+  color: @color-highlight-1;
+}
+
+.fancy {
+  font-family: @font-fancy;
+  font-size: 50%;
+}
 
 .thumbnail-item {
     -ms-filter: grayscale(100%);
@@ -428,29 +583,35 @@ header .hero-text-arc {
   filter: grayscale(0%);
 }
 
-
-///////////// SECTION CLASS OVERRIDES ///////////////
-
-.sec-primary {
-    background-color: @color-div-light;
-    //color: @color-p;
+.star {
+    visibility: hidden;
 }
 
-.sec-alt {
-    background-color: @color-div-dark;
-    //color: @color-p;
+.fab {
+  font-size: 200%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fab:hover {
+    opacity: 0.5;
+    color: white;
 }
 
 ///////////// FOOTER CLASS OVERRIDES ///////////////
-
 .footer-distributed p{
   color: @color-text-white;
+  font-family: @font-alt;
+  font-size: 80%;
 }
 
 .footer-distributed{
   z-index: 1;
 	background-color: @color-text-dark-alt;
   color: @color-text-white;
+  font-family: @font-alt;
+
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
@@ -489,33 +650,44 @@ header .hero-text-arc {
 	margin-left: 3px;
 }
 
-/// STANDARD COMPUTERS TO LARGE MOBILE DEVICES (TABLETS)
-
-//TODO: Fix so that styling is applied on page load
-
-@media (min-width: 420px) {
+///////////// LARGE DEVICE OVERRIDES ///////////////
+@media (min-width: 769px) {
     #header-index {
        background-image: @img-bg1;
+       animation:opac 1.2s;
     }
 
-    #header-about {
+    #header-experience {
        background-image: @img-bg2;
+       animation:opac 1.2s;
+    }
+
+    #header-profile {
+       background-image: @img-bg3;
+       animation:opac 1.2s;
+    }
+
+    #header-history {
+       background-image: @img-bg4;
+       animation:opac 1.2s;
     }
 
     #header-recommend {
-       background-image: @img-bg3;
-    }
-
-    #header-strengths {
-       background-image: @img-bg4;
-    }
-
-    #header-thoughts {
        background-image: @img-bg5;
+       animation:opac 1.2s;
     }
 
-    .sec-style:before, .sec-style:after, .sec-style-base:before {
-        transform: skewY(0deg);
+    #header-site {
+       background-image: @img-bg6;
+       animation:opac 1.2s;
+    }
+
+    #defensor-sm {
+      display: none;
+    }
+
+    .sec-alt {
+        background-color: @color-div-light;
     }
 
     .divider {
@@ -523,7 +695,7 @@ header .hero-text-arc {
     }
 
     .para-divider {
-        height: 20px;
+        height: 40px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -551,98 +723,68 @@ header .hero-text-arc {
        background-image: @img-bg5;
     }
 
+    .para-div-6 {
+       background-image: @img-bg6;
+    }
 
     .flex-gallery-mobile {
        display: none;
     }
 }
 
-
-/// SMALL MOBILE DEVICES
-
-@media (max-width: 420px) {
+@media (min-width: 769px) {
     #header-index {
-         background-image: @img-bg1-sm;
+       background-image: @img-bg1;
+       animation:opac 1.2s;
     }
 
-    #header-about {
+}
+
+///////////// SMALL DEVICE OVERRIDES ///////////////
+@media (max-width: 768px) {
+    #header-index {
+         background-image: @img-bg1-sm;
+         animation:opac 1.2s;
+    }
+
+    #header-experience {
          background-image: @img-bg2-sm;
+         animation:opac 1.2s;
+    }
+
+    #header-profile {
+       background-image: @img-bg3-sm;
+       animation:opac 1.2s;
+    }
+
+    #header-history {
+       background-image: @img-bg4-sm;
+       animation:opac 1.2s;
     }
 
     #header-recommend {
-       background-image: @img-bg3-sm;
-    }
-
-    #header-strengths {
-       background-image: @img-bg4-sm;
-    }
-
-    #header-thoughts {
        background-image: @img-bg5-sm;
+       animation:opac 1.2s;
     }
 
-    h1 {
-        font-size: 1.5em;
+    #header-site {
+       background-image: @img-bg6-sm;
+    }
+
+    #defensor-lg {
+      display: none;
+    }
+
+    .sec-alt {
+        background-color: @color-div-dark;
+    }
+
+    .fancy {
+      font-size: 1.5em;
     }
 
     .divider {
         display: none;
-    }
-
-    .sec-style:before, .sec-style:after, .sec-style-base:before {
-        transform: skewY(3.5deg);
-    }
-
-    .sec-style {
-        position: relative;
-        z-index: 1;
-    }
-
-    .sec-style:before {
-        background: inherit;
-        top: 0;
-        content: '';
-        display: block;
-        height: 50%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        //transform: skewY(1.5deg);
-        transform-origin: 100%;
-        z-index: -1;
-    }
-
-    .sec-style:after {
-        background: inherit;
-        bottom: 1;
-        content: '';
-        display: block;
-        height: 50%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        transform-origin: 100%;
-        //transform: skewY(1.5deg);
-        z-index: -1;
-    }
-
-    .sec-style-base {
-        position: relative;
-        z-index: 1;
-    }
-
-    .sec-style-base:before {
-        background: inherit;
-        top: 0;
-        content: '';
-        display: block;
-        height: 50%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        //transform: skewY(1.5deg);
-        transform-origin: 100%;
-        z-index: -1;
     }
 
     .flex-gallery {
@@ -662,15 +804,9 @@ header .hero-text-arc {
         -webkit-filter: grayscale(0%);
         filter: grayscale(0%);
     }
-
-
 }
 
-
-.star {
-    visibility: hidden;
-}
-
+/////////////// ANIMATION OVERRIDES ////////////////
 .fadeIn {
     -webkit-animation: animat_show 0.8s;
     animation: animat_show 0.8s;
@@ -680,4 +816,9 @@ header .hero-text-arc {
 @-webkit-keyframes animat_show{
     0%{opacity:0}
     100%{opacity:1}
+}
+
+@keyframes opac{
+    from{opacity:0}
+    to{opacity:1}
 }

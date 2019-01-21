@@ -15,16 +15,19 @@
                const myCircleType = new CircleType(document.getElementById('bendyArc'));
                myCircleType.radius(400).dir(-1);
             });
-            $('[data-header-about="header-about"]').load("partials/header-about.html");
+            $('[data-header-experience="header-experience"]').load("partials/header-experience.html");
             $('[data-header-recommend="header-recommend"]').load("partials/header-recommend.html");
-            $('[data-header-strengths="header-strengths"]').load("partials/header-strengths.html");
-            $('[data-header-thoughts="header-thoughts"]').load("partials/header-thoughts.html");
-
+            $('[data-header-profile="header-profile"]').load("partials/header-profile.html");
+            $('[data-header-history="header-history"]').load("partials/header-history.html");
+            $('[data-header-site="header-site"]').load("partials/header-site.html");
 
             $("media-test-divider").addClass("media-large-divider");
             $("media-test-para-divider").addClass("media-large-para-divider");
 
             $('header').css("background-attachment","fixed");
+
+
+
 
         } else {
 
@@ -34,18 +37,19 @@
                   $('.navbar-collapse').collapse('hide');
               });
             });
-            $('[data-header-about="header-about"]').load("partials/header-about-mobile.html");
+            $('[data-header-experience="header-experience"]').load("partials/header-experience-mobile.html");
             $('[data-header-recommend="header-recommend"]').load("partials/header-recommend-mobile.html");
-            $('[data-header-strengths="header-strengths"]').load("partials/header-strengths-mobile.html");
-            $('[data-header-thoughts="header-thoughts"]').load("partials/header-thoughts-mobile.html");
-
+            $('[data-header-profile="header-profile"]').load("partials/header-profile-mobile.html");
+            $('[data-header-history="header-history"]').load("partials/header-history-mobile.html");
+            $('[data-header-site="header-site"]').load("partials/header-site-mobile.html");
         };
 
         $('[data-main-index="main-index"]').load("partials/body-index-main.html");
-        $('[data-main-about="main-about"]').load("partials/body-about-main.html");
+        $('[data-main-experience="main-experience"]').load("partials/body-experience-main.html");
         $('[data-main-recommend="main-recommend"]').load("partials/body-recommend-main.html");
-        $('[data-main-strengths="main-strengths"]').load("partials/body-strengths-main.html");
-        $('[data-main-thoughts="main-thoughts"]').load("partials/body-thoughts-main.html");
+        $('[data-main-profile="main-profile"]').load("partials/body-profile-main.html");
+        $('[data-main-history="main-history"]').load("partials/body-history-main.html");
+        $('[data-main-site="main-site"]').load("partials/body-site-main.html");
 
         $('[data-footer="footer-div"]').load("partials/footer.html");
 
