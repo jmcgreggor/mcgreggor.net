@@ -2,22 +2,30 @@
 
 @font-face {
 font-family: 'Ariona-Regular';
-src:
-   url('../fonts/Ariona-Regular.eot') format('eot');
-src:
-   url('../fonts/Ariona-Regular.ttf') format('truetype'),
-   url('../fonts/Ariona-Regular.woff2') format('woff2'),
-   url('../fonts/Ariona-Regular.woff') format('woff'),
-   url('../fonts/Ariona-Regular.otf') format('opentype');
-   font-style: normal;
-src:
-   local(font 'Ariona-Regular'), url('../fonts/Ariona-Regular.ttf') format('truetype');
+ src:
+    url('/fonts/Ariona-Regular.eot') format('eot');
+ src:
+    url('/fonts/Ariona-Regular.ttf') format('truetype'),
+    url('/fonts/Ariona-Regular.woff2') format('woff2'),
+    url('/fonts/Ariona-Regular.woff') format('woff'),
+    url('/fonts/Ariona-Regular.otf') format('opentype');
+    font-style: normal;
+ src:
+    local(font 'Ariona-Regular'), url('/fonts/Ariona-Regular.ttf') format('truetype');
+
+font-family: "SAILORRegular";
+  src:
+    url("../fonts/SAILORRegular.woff") format("woff"),
+    url("../fonts/SAILORRegular.woff2") format("woff2"),
+    url("../fonts/SAILOR.otf") format("opentype"),
+    url("../fonts/SAILORRegular.ttf") format("ttf"),
+    url("../fonts/SAILORRegular.svg#filename") format("svg");
 }
 
 ///////////// COMMON STYLES ///////////////
 // @font-primary: 'Verdana', 'Helvetica', sans-serif;
-@font-primary: 'Times New Roman','Century Gothic';
-@font-headings: 'Ariona-Regular', 'Avenir Next', 'Helvetica', sans-serif;
+@font-primary: 'Arial', sans-serif;
+@font-headings: 'SAILORRegular','Courier';
 @font-alt: 'Verdana', 'Helvetica', sans-serif;
 @font-alt-serif: 'Didot','Century Gothic','Times New Roman';
 @font-fancy: 'Zapfino', cursive;
@@ -33,15 +41,27 @@ src:
 @color-test: yellow;
 
 ///////////// PAGE THEMES ///////////////
-@color-highlight-1: #327a8f; //Mountain blue
+// @color-highlight-1: #327a8f; //Mountain blue
+// @color-highlight-2: #cc5500; //Burnt orange
+// @color-highlight-3: #7851a9; //Royal purple
+// @color-highlight-4: #355e3b; //Hunter green
+// @color-highlight-5: #3c0069; //Dark indigo
+// @color-highlight-6: #fbcc5b; //Mustardish yellow
+
+@color-highlight-1: #0077cc; //Mountain blue
 @color-highlight-2: #cc5500; //Burnt orange
 @color-highlight-3: #7851a9; //Royal purple
 @color-highlight-4: #355e3b; //Hunter green
 @color-highlight-5: #3c0069; //Dark indigo
-@color-highlight-6: #fbcc5b; //Mustardish yellow
+@color-highlight-6: #EFE5D8; //Mustardish yellow
+@color-highlight-7: #add8b3; //Light foam green
 
-@img-bg1: url("/images/header-mountain-1-lg.jpg");
+@img-bg1-1: url("/images/header-mountain-1-lg-1.jpg");
+@img-bg1-2: url("/images/header-mountain-1-lg-2.jpg");
+@img-bg1-3: url("/images/header-mountain-1-lg-3.jpg");
+
 @img-bg1-sm: url("/images/header-mountain-1-sm.jpg");
+// @img-bg1-sm-alt: url("/images/header-mountain-1-sm.jpg");
 @img-bg2: url("/images/header-mountain-3-lg.jpg");
 @img-bg2-sm: url("/images/header-mountain-3-sm.jpg");
 @img-bg3: url("/images/header-mountain-2-lg.jpg");
@@ -99,7 +119,7 @@ h1, h3 {
 
 p {
     font-family: @font-primary;
-    font-size: 120%;
+    //font-size: 120%;
 }
 
 // a {
@@ -190,6 +210,7 @@ ul {
 }
 
 ///////////// HEADER CLASS OVERRIDES ///////////////
+
 header .container {
     height: 55vw;
     padding-top: 7%;
@@ -228,28 +249,28 @@ header .container-standard {
 }
 
 header .logo-mob {
-    padding-bottom: 5vw;
+    padding-bottom: 6vw;
 }
 
 header .hero-text-lg {
     font-size: 7vw;
-    font-family: @font-primary;
+    //font-family: @font-primary;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
 }
 
 header .hero-text-lg-alt {
     font-size: 5vw;
-    font-family: @font-alt;
+    //font-family: @font-alt;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
 }
 
-header .hero-text-sm {
+header .hero-text-header-sm {
     font-size: 4vw;
     font-family: @font-fancy;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
 }
 
-header .hero-text-sm-alt {
+header .hero-text-header-sm-alt {
     font-size: 7vw;
     font-family: @font-alt;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
@@ -259,6 +280,24 @@ header .hero-text-arc {
     font-size: 2vw;
     font-family: @font-fancy;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+}
+
+header .hero-text-header {
+    font-size: 2vw;
+    font-family: @font-fancy;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+}
+
+.header-index-1 {
+   background-image: @img-bg1-1;
+}
+
+.header-index-2 {
+   background-image: @img-bg1-2;
+}
+
+.header-index-3 {
+   background-image: @img-bg1-3;
 }
 
 .header-fancy {
@@ -461,6 +500,8 @@ header .hero-text-arc {
     margin: auto;
     width: 35%;
     height: auto;
+
+    padding-bottom: 2vw;
 }
 
 .div-accented {
@@ -530,8 +571,8 @@ header .hero-text-arc {
 }
 
 .p-main {
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
 }
 
 .p-alt {
@@ -541,11 +582,13 @@ header .hero-text-arc {
 
 .profile-type {
   font-family: @font-alt;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 100%;
-  border-style:solid;
+  // font-color: white;
+  border-style: solid;
   text-align: center;
   margin: auto;
+  background: @color-highlight-7;
 }
 
 .hr-alt {
@@ -554,7 +597,7 @@ header .hero-text-arc {
 }
 
 .reccomend:hover {
-  background-color: #f3eef6;
+  background-color: @color-highlight-6;
   -webkit-transition: background-color 1.5s;
   transition: background-color 1.5s;
 }
@@ -566,7 +609,7 @@ header .hero-text-arc {
 
 .fancy {
   font-family: @font-fancy;
-  font-size: 50%;
+  //font-size: 50%;
 }
 
 .thumbnail-item {
@@ -653,7 +696,7 @@ header .hero-text-arc {
 ///////////// LARGE DEVICE OVERRIDES ///////////////
 @media (min-width: 769px) {
     #header-index {
-       background-image: @img-bg1;
+       // background-image: @img-bg1;
        animation:opac 1.2s;
     }
 
@@ -695,7 +738,7 @@ header .hero-text-arc {
     }
 
     .para-divider {
-        height: 40px;
+        height: 20px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -703,8 +746,18 @@ header .hero-text-arc {
         color: #fff;
     }
 
-    .para-div-1 {
-       background-image: @img-bg1;
+     // TODO: Fix to be timed
+
+    .para-div-1-1 {
+       background-image: @img-bg1-1;
+    }
+
+    .para-div-1-2 {
+       background-image: @img-bg1-2;
+    }
+
+    .para-div-1-3 {
+       background-image: @img-bg1-3;
     }
 
     .para-div-2 {
@@ -734,7 +787,7 @@ header .hero-text-arc {
 
 @media (min-width: 769px) {
     #header-index {
-       background-image: @img-bg1;
+       // background-image: @img-bg1;
        animation:opac 1.2s;
     }
 

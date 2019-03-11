@@ -4,6 +4,9 @@
   var $ = window.jQuery;
   var App = window.App;
   var UserDevice = App.CheckViewport(window.document.documentElement.clientWidth);
+  // var UserBrowser = App.CheckBrowser(window.navigator.userAgent);
+  var current= new Date();
+  var day_night=current.getHours();
 
   $(document).ready(() => {
 
@@ -23,11 +26,7 @@
 
             $("media-test-divider").addClass("media-large-divider");
             $("media-test-para-divider").addClass("media-large-para-divider");
-
             $('header').css("background-attachment","fixed");
-
-
-
 
         } else {
 
@@ -44,7 +43,25 @@
             $('[data-header-site="header-site"]').load("partials/header-site-mobile.html");
         };
 
-        $('[data-main-index="main-index"]').load("partials/body-index-main.html");
+        // TODO: Not working
+
+        if (day_night>=18) {
+            $('[data-header-index="header-index"]').addClass("header-index-3");
+            $('[data-para-divider-main="divider-main"]').addClass("para-div-1-3");
+        } else if (day_night>=12 && day_night<18) {
+            $('[data-header-index="header-index"]').addClass("header-index-2");
+            $('[data-para-divider-main="divider-main"]').addClass("para-div-1-2");
+        } else {
+          $('[data-header-index="header-index"]').addClass("header-index-1");
+          $('[data-para-divider-main="divider-main"]').addClass("para-div-1-1");
+        };
+
+        // if (day_night>=12) {
+        //     $('[data-header-index="header-index"]').addClass("header-index-night");
+        // } else {
+        //     $('[data-header-index="header-index"]').addClass("header-index-day");
+        // };
+
         $('[data-main-experience="main-experience"]').load("partials/body-experience-main.html");
         $('[data-main-recommend="main-recommend"]').load("partials/body-recommend-main.html");
         $('[data-main-profile="main-profile"]').load("partials/body-profile-main.html");
@@ -52,6 +69,10 @@
         $('[data-main-site="main-site"]').load("partials/body-site-main.html");
 
         $('[data-footer="footer-div"]').load("partials/footer.html");
+
+
+
+
 
         function showImages(el) {
           var windowHeight = jQuery( window ).height();
@@ -64,6 +85,9 @@
             }
           });
         }
+
+
+
 
         // if the image in the window of browser when the page is loaded, show that image
         $(document).ready(function(){
