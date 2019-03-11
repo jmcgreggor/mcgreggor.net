@@ -51,6 +51,8 @@ app.use("/",router);
 
 app.use('/images', express.static(path + '/public/images'));
 
+app.use('/fonts', express.static(path + '/public/fonts'));
+
 app.use('/scripts', express.static(path + '/scripts'));
 
 app.use('/partials', express.static(path + '/views/partials'));
