@@ -3,23 +3,23 @@
 @font-face {
 font-family: 'Ariona-Regular';
  src:
-    url('/fonts/Ariona-Regular.eot') format('eot');
+    url('/fonts/arionaregular.eot') format('eot');
  src:
-    url('/fonts/Ariona-Regular.ttf') format('truetype'),
-    url('/fonts/Ariona-Regular.woff2') format('woff2'),
-    url('/fonts/Ariona-Regular.woff') format('woff'),
-    url('/fonts/Ariona-Regular.otf') format('opentype');
+    url('/fonts/arionaregular.ttf') format('truetype'),
+    url('/fonts/arionaregular.woff2') format('woff2'),
+    url('/fonts/arionaregular.woff') format('woff'),
+    url('/fonts/arionaregular.otf') format('opentype');
     font-style: normal;
  src:
     local(font 'Ariona-Regular'), url('/fonts/Ariona-Regular.ttf') format('truetype');
 
 font-family: "SAILORRegular";
   src:
-    url("../fonts/SAILORRegular.woff") format("woff"),
-    url("../fonts/SAILORRegular.woff2") format("woff2"),
-    url("../fonts/SAILOR.otf") format("opentype"),
-    url("../fonts/SAILORRegular.ttf") format("ttf"),
-    url("../fonts/SAILORRegular.svg#filename") format("svg");
+    url("../fonts/sailorregular.woff") format("woff"),
+    url("../fonts/sailorregular.woff2") format("woff2"),
+    url("../fonts/sailorregular.otf") format("opentype"),
+    url("../fonts/sailorregular.ttf") format("ttf");
+    //url("../fonts/sailorregular.svg#filename") format("svg");
 }
 
 ///////////// COMMON STYLES ///////////////
@@ -41,13 +41,6 @@ font-family: "SAILORRegular";
 @color-test: yellow;
 
 ///////////// PAGE THEMES ///////////////
-// @color-highlight-1: #327a8f; //Mountain blue
-// @color-highlight-2: #cc5500; //Burnt orange
-// @color-highlight-3: #7851a9; //Royal purple
-// @color-highlight-4: #355e3b; //Hunter green
-// @color-highlight-5: #3c0069; //Dark indigo
-// @color-highlight-6: #fbcc5b; //Mustardish yellow
-
 @color-highlight-1: #0077cc; //Mountain blue
 @color-highlight-2: #cc5500; //Burnt orange
 @color-highlight-3: #7851a9; //Royal purple
@@ -212,15 +205,15 @@ ul {
 ///////////// HEADER CLASS OVERRIDES ///////////////
 
 header .container {
-    height: 55vw;
-    padding-top: 7%;
+//    height: 55vw;
+//    padding-top: 7%;
 
     justify-content: center;
 }
 
 header .container-alt {
-    height: 40vw;
-    padding-top: 12%;
+//    height: 40vw;
+//    padding-top: 12%;
 
 
     justify-content: center;
@@ -571,24 +564,25 @@ header .hero-text-header {
 }
 
 .p-main {
-  margin-left: 15vw;
-  margin-right: 15vw;
+  margin-left: 12vw;
+  margin-right: 12vw;
 }
 
 .p-alt {
-  margin-left: 20vw;
-  margin-right: 20vw;
+  margin-left: 12vw;
+  margin-right: 12vw;
 }
 
 .profile-type {
   font-family: @font-alt;
   font-weight: bold;
   font-size: 100%;
-  // font-color: white;
+  color: white;
   border-style: solid;
+  border-color: black;
   text-align: center;
   margin: auto;
-  background: @color-highlight-7;
+  background: @color-highlight-1;
 }
 
 .hr-alt {
@@ -700,6 +694,16 @@ header .hero-text-header {
        animation:opac 1.2s;
     }
 
+    header .container {
+        height: 55vw;
+        padding-top: 7%;
+    }
+
+    header .container-alt {
+        height: 40vw;
+        padding-top: 12%;
+    }
+
     #header-experience {
        background-image: @img-bg2;
        animation:opac 1.2s;
@@ -798,6 +802,16 @@ header .hero-text-header {
     #header-index {
          background-image: @img-bg1-sm;
          animation:opac 1.2s;
+    }
+
+    header .container {
+        height: 70vw;
+        padding-top: 12%;
+    }
+
+    header .container-alt {
+        height: 55vw;
+        padding-top: 18%;
     }
 
     #header-experience {
