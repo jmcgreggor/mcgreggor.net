@@ -43,7 +43,7 @@
             $('[data-header-site="header-site"]').load("partials/header-site-mobile.html");
         };
 
-        // TODO: Not working
+        // TODO: Not working?
 
         if (day_night>=18) {
             $('[data-header-index="header-index"]').addClass("header-index-3");
@@ -67,6 +67,7 @@
         $('[data-main-profile="main-profile"]').load("partials/body-profile-main.html");
         $('[data-main-history="main-history"]').load("partials/body-history-main.html");
         $('[data-main-site="main-site"]').load("partials/body-site-main.html");
+
 
         $('[data-footer="footer-div"]').load("partials/footer.html");
 
